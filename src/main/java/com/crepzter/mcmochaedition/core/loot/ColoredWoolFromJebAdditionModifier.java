@@ -31,7 +31,7 @@ public class ColoredWoolFromJebAdditionModifier extends LootModifier {
 				int amount = 0;
 				for(ItemStack stack : generatedLoot) {
 					if(stack.is(ItemTags.WOOL)) {
-						amount = stack.getCount();
+						amount += stack.getCount();
 						generatedLoot.remove(stack);
 					}
 				}
