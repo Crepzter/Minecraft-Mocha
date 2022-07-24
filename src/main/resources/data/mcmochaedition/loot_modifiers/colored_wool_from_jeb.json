@@ -1,0 +1,12 @@
+{
+  "type": "mcmochaedition:colored_wool_from_jeb",
+  "conditions": [
+  	{
+  	  "condition": "minecraft:entity_properties",
+      "entity": "this",
+      "predicate": {
+        "type": "minecraft:sheep"
+      }
+    }
+  ]
+}

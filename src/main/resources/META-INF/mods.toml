@@ -1,0 +1,29 @@
+modLoader="javafml"
+loaderVersion="[40,)"
+
+license="MIT"
+
+[[mods]]
+modId="mcmochaedition"
+version="${file.jarVersion}"
+
+displayName="Minecraft Mocha Edition"
+logoFile="mocha_logo.png" #optional
+
+credits="Thanks Johnnydevo for the name idea!"
+authors="Crepzter"
+description='''This is my approach on creating a mod that introduces small features the minecraft community (or myself ;)) wants and are currently missing.'''
+
+[[dependencies.examplemod]]
+    modId="forge"
+    mandatory=true
+    versionRange="[40,)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.examplemod]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.18.2,1.19)"
+    ordering="NONE"
+    side="BOTH"
