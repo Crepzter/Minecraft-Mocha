@@ -20,7 +20,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.DispenserBlock;
 import net.minecraft.world.phys.AABB;
 
-public class McMochaShearsDispenseItemBehavior extends ShearsDispenseItemBehavior {//OptionalDispenseItemBehavior {
+public class McMochaShearsDispenseItemBehavior extends ShearsDispenseItemBehavior {
 	
 	protected ItemStack execute(BlockSource source, ItemStack stack) {
 		Level level = source.getLevel();
