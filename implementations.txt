@@ -1,0 +1,10 @@
+A little file for other mod/modpack creators to see, what aspects of the vanilla code my mod actually changes
+
+Jeb_ Sheeps (all only run if named "jeb_"):
+
+	-on kill:
+		-GlobalLootModifier -> removes wool from generated loot and replaces it with correctly coloured wool
+	-on player shear:
+		-PlayerInteractEvent.EntityInteract -> cancels original event, spawns correct wool and plays sound...
+	-on dispenser shear:
+		-ShearsDispenseItemBehavior -> runs custom Sheep#shear for correct color, damages stack and plays sound...
