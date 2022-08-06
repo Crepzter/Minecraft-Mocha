@@ -1,4 +1,4 @@
-package com.crepzter.mcmochaedition.core.loot;
+package com.crepzter.mcmochaedition.common.loot;
 
 import java.util.List;
 

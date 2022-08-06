@@ -1,16 +1,24 @@
-package com.crepzter.mcmochaedition.common.event;
+package com.crepzter.mcmochaedition.event;
 
 import com.crepzter.mcmochaedition.McMochaEdition;
 import com.crepzter.mcmochaedition.core.config.McMochaEditionCommonConfigs;
+import com.crepzter.mcmochaedition.screen.FletchingTableMenu;
 import com.crepzter.mcmochaedition.utils.SheepUtils;
 
+import net.minecraft.core.BlockPos;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
+import net.minecraft.world.MenuProvider;
+import net.minecraft.world.SimpleMenuProvider;
 import net.minecraft.world.entity.animal.Sheep;
 import net.minecraft.world.entity.item.ItemEntity;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.inventory.ContainerLevelAccess;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -42,5 +50,22 @@ public class CommonForgeEvents {
 			    event.setCanceled(true);
 			}
 		}
+	}
+	
+	@SubscribeEvent
+	public static void onRightClickFletchingTable(PlayerInteractEvent.RightClickBlock event) {
+		Player player = event.getPlayer();
+		BlockState state = player.level.getBlockState(event.getPos());
+		
+		if(state.is(Blocks.FLETCHING_TABLE) && !event.getPlayer().level.isClientSide()) {
+			System.out.println("clicked");
+			player.openMenu(state.getMenuProvider(player.level, event.getPos()));
+		}
+	}
+	
+	public MenuProvider getMenuProvider(BlockState state, Level level, BlockPos pos) {
+		return new SimpleMenuProvider((id, inv, access) -> {
+			return new FletchingTableMenu(id, inv, ContainerLevelAccess.create(level, pos));
+		}, FletchingTableMenu.CONTAINER_TITLE);
 	}
 }

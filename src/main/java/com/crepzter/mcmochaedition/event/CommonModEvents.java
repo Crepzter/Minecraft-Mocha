@@ -1,4 +1,4 @@
-package com.crepzter.mcmochaedition.common.event;
+package com.crepzter.mcmochaedition.event;
 
 import com.crepzter.mcmochaedition.McMochaEdition;
 import com.crepzter.mcmochaedition.common.behavior.McMochaShearsDispenseItemBehavior;

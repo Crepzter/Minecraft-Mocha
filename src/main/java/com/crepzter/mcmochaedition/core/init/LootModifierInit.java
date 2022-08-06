@@ -1,7 +1,7 @@
 package com.crepzter.mcmochaedition.core.init;
 
 import com.crepzter.mcmochaedition.McMochaEdition;
-import com.crepzter.mcmochaedition.core.loot.ColoredWoolFromJebAdditionModifier;
+import com.crepzter.mcmochaedition.common.loot.ColoredWoolFromJebAdditionModifier;
 
 import net.minecraftforge.common.loot.GlobalLootModifierSerializer;
 import net.minecraftforge.registries.DeferredRegister;
