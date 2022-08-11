@@ -54,18 +54,21 @@ public class CommonForgeEvents {
 	
 	@SubscribeEvent
 	public static void onRightClickFletchingTable(PlayerInteractEvent.RightClickBlock event) {
+		/*
 		Player player = event.getPlayer();
 		BlockState state = player.level.getBlockState(event.getPos());
 		
-		if(state.is(Blocks.FLETCHING_TABLE) && !event.getPlayer().level.isClientSide()) {
-			System.out.println("clicked");
-			player.openMenu(state.getMenuProvider(player.level, event.getPos()));
-		}
+		if(state.is(Blocks.FLETCHING_TABLE) && !player.level.isClientSide()) {
+			event.setCanceled(true);
+			
+			player.openMenu(getMenuProvider(state, player.level, event.getPos()));
+		}*/
 	}
-	
-	public MenuProvider getMenuProvider(BlockState state, Level level, BlockPos pos) {
+	/*
+	public static MenuProvider getMenuProvider(BlockState state, Level level, BlockPos pos) {
 		return new SimpleMenuProvider((id, inv, access) -> {
 			return new FletchingTableMenu(id, inv, ContainerLevelAccess.create(level, pos));
 		}, FletchingTableMenu.CONTAINER_TITLE);
 	}
+	*/
 }

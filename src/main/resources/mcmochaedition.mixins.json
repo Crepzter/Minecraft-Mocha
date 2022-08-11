@@ -1,0 +1,12 @@
+{
+  "required": true,
+  "package": "com.crepzter.mcmochaedition.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "refmap": "mcmochaedition.refmap.json",
+  "mixins": [
+    "FletchingTableMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

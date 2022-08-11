@@ -1,10 +1,12 @@
 buildscript {
     repositories {
         maven { url = 'https://maven.minecraftforge.net' }
+        maven { url = 'https://repo.spongepowered.org/repository/maven-public/' }
         mavenCentral()
     }
     dependencies {
         classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: '5.1.+', changing: true
+        classpath group: 'org.spongepowered', name: 'mixingradle', version: '0.7-SNAPSHOT'
     }
 }
 
@@ -12,14 +14,21 @@ plugins {
     id 'eclipse'
     id 'maven-publish'
 }
-apply plugin: 'net.minecraftforge.gradle'
 
+apply plugin: 'net.minecraftforge.gradle'
+apply plugin: 'org.spongepowered.mixin'
 
 version = '1.0'
 group = 'com.crepzter.mcmochaedition'
 archivesBaseName = 'mcmochaedition'
 
 java.toolchain.languageVersion = JavaLanguageVersion.of(17)
+
+mixin {
+    add sourceSets.main, "mcmochaedition.refmap.json"
+
+    config "mcmochaedition.mixins.json"
+}
 
 println "Java: ${System.getProperty 'java.version'}, JVM: ${System.getProperty 'java.vm.version'} (${System.getProperty 'java.vendor'}), Arch: ${System.getProperty 'os.arch'}"
 minecraft {
@@ -86,6 +95,8 @@ repositories {
 
 dependencies {
     minecraft 'net.minecraftforge:forge:1.18.2-40.1.60'
+    
+    annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
 }
 
 jar {

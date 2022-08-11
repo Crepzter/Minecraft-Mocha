@@ -1,0 +1,12 @@
+{
+  "type": "mcmochaedition:fletching_arrow",
+  "ingredients": [
+    { "item": "minecraft:flint" },
+    { "item": "minecraft:stick" },
+    { "item": "minecraft:feather" }
+  ],
+  "output": {
+    "item": "minecraft:arrow",
+    "count": 8
+  }
+}

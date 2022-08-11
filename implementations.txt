@@ -8,3 +8,9 @@ Jeb_ Sheeps (all only run if named "jeb_"):
 		-PlayerInteractEvent.EntityInteract -> cancels original event, spawns correct wool and plays sound...
 	-on dispenser shear:
 		-ShearsDispenseItemBehavior -> runs custom Sheep#shear for correct color, damages stack and plays sound...
+
+
+Fletching Table:
+
+	-mixin: injected at "use" RETURN
+		-Serverside --> opens FletchingTableMenu

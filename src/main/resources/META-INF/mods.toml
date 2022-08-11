@@ -5,7 +5,7 @@ license="MIT"
 
 [[mods]]
 modId="mcmochaedition"
-version="${file.jarVersion}"
+version="1.0"
 
 displayName="Minecraft Mocha Edition"
 logoFile="mocha_logo.png" #optional

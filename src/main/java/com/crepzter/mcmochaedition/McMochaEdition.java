@@ -2,6 +2,8 @@ package com.crepzter.mcmochaedition;
 
 import com.crepzter.mcmochaedition.core.config.McMochaEditionCommonConfigs;
 import com.crepzter.mcmochaedition.core.init.LootModifierInit;
+import com.crepzter.mcmochaedition.core.init.MenuInit;
+import com.crepzter.mcmochaedition.core.init.RecipeInit;
 
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -20,6 +22,8 @@ public class McMochaEdition {
 		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
 		
 		LootModifierInit.GLM.register(bus);
+		MenuInit.MENUS.register(bus);
+		RecipeInit.RECIPES.register(bus);
 		
 		ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, McMochaEditionCommonConfigs.SPEC, "mcmochaedition-common-config.toml");
 	}
