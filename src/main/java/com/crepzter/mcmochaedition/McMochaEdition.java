@@ -1,9 +1,10 @@
 package com.crepzter.mcmochaedition;
 
-import com.crepzter.mcmochaedition.core.config.McMochaEditionCommonConfigs;
-import com.crepzter.mcmochaedition.core.init.LootModifierInit;
-import com.crepzter.mcmochaedition.core.init.MenuInit;
-import com.crepzter.mcmochaedition.core.init.RecipeInit;
+import com.crepzter.mcmochaedition.config.McMochaEditionCommonConfigs;
+import com.crepzter.mcmochaedition.init.BlockInit;
+import com.crepzter.mcmochaedition.init.LootModifierInit;
+import com.crepzter.mcmochaedition.init.MenuInit;
+import com.crepzter.mcmochaedition.init.RecipeInit;
 
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;

@@ -1,4 +1,4 @@
-package com.crepzter.mcmochaedition.core.config;
+package com.crepzter.mcmochaedition.config;
 
 import net.minecraftforge.common.ForgeConfigSpec;
 

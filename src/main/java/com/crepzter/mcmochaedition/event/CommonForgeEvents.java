@@ -1,7 +1,7 @@
 package com.crepzter.mcmochaedition.event;
 
 import com.crepzter.mcmochaedition.McMochaEdition;
-import com.crepzter.mcmochaedition.core.config.McMochaEditionCommonConfigs;
+import com.crepzter.mcmochaedition.config.McMochaEditionCommonConfigs;
 import com.crepzter.mcmochaedition.screen.FletchingTableMenu;
 import com.crepzter.mcmochaedition.utils.SheepUtils;
 

@@ -2,7 +2,7 @@ package com.crepzter.mcmochaedition.common.loot;
 
 import java.util.List;
 
-import com.crepzter.mcmochaedition.core.config.McMochaEditionCommonConfigs;
+import com.crepzter.mcmochaedition.config.McMochaEditionCommonConfigs;
 import com.crepzter.mcmochaedition.utils.SheepUtils;
 
 import net.minecraft.resources.ResourceLocation;

@@ -6,7 +6,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 import org.spongepowered.asm.mixin.injection.callback.LocalCapture;
 import org.spongepowered.asm.mixin.injection.At;
 
-import com.crepzter.mcmochaedition.core.config.McMochaEditionCommonConfigs;
+import com.crepzter.mcmochaedition.config.McMochaEditionCommonConfigs;
 import com.crepzter.mcmochaedition.screen.FletchingTableMenu;
 
 import net.minecraft.core.BlockPos;

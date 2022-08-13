@@ -1,4 +1,4 @@
-package com.crepzter.mcmochaedition.core.init;
+package com.crepzter.mcmochaedition.init;
 
 import com.crepzter.mcmochaedition.McMochaEdition;
 import com.crepzter.mcmochaedition.recipe.FletchingRecipe;

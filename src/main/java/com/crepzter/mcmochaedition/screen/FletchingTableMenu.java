@@ -2,7 +2,7 @@ package com.crepzter.mcmochaedition.screen;
 
 import java.util.List;
 
-import com.crepzter.mcmochaedition.core.init.MenuInit;
+import com.crepzter.mcmochaedition.init.MenuInit;
 import com.crepzter.mcmochaedition.recipe.FletchingRecipe;
 import com.crepzter.mcmochaedition.screen.slot.ModRestrictedSlot;
 

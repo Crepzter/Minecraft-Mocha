@@ -1,0 +1,18 @@
+-place buttons on straight walls --> post, like string on wall
+-dye cauldron/bedrock cauldron
+-dye shulker
+-better bioms ((birch) forest, plains....)
+-sugar block --> dissolves with water/rain
+-healing iron golem --> friendly again
+-inventory https://www.reddit.com/r/minecraftsuggestions/comments/wi0tg8/upgrade_to_minecrafts_inventory_with_pictures/
+-faster minecarts github
+-damage tilt github
+-give snow gravity
+-elytra camera tilt https://www.youtube.com/watch?app=desktop&v=3xWduLJ6iAE&t=82s
+-music player hoppers
+-soul fire fire, actually blue on entity
+-holding lightning rod --> player gets striked
+-missing blocks,stairs,slabs
+-chests of every wood type
+-allow glass panes being half waterlogged
+-generic bird, like tropical fish, many textures

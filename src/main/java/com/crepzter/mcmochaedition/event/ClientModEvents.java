@@ -1,7 +1,7 @@
 package com.crepzter.mcmochaedition.event;
 
 import com.crepzter.mcmochaedition.McMochaEdition;
-import com.crepzter.mcmochaedition.core.init.MenuInit;
+import com.crepzter.mcmochaedition.init.MenuInit;
 import com.crepzter.mcmochaedition.screen.FletchingTableScreen;
 
 import net.minecraftforge.fml.common.Mod;

@@ -7,7 +7,7 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 import org.spongepowered.asm.mixin.injection.callback.LocalCapture;
 
-import com.crepzter.mcmochaedition.core.config.McMochaEditionCommonConfigs;
+import com.crepzter.mcmochaedition.config.McMochaEditionCommonConfigs;
 import com.crepzter.mcmochaedition.utils.SheepUtils;
 
 import net.minecraft.network.syncher.EntityDataAccessor;
