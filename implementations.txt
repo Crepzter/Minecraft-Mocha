@@ -1,16 +1,23 @@
-A little file for other mod/modpack creators to see, what aspects of the vanilla code my mod actually changes
+--> A little file for other mod/modpack creators to see, what aspects of the vanilla code my mod actually changes <--
+	  !!! All Features can be (de)activated in mod_configs and swapped between mixin and wo_mixin !!!
 
 Jeb_ Sheeps (all only run if named "jeb_"):
-
-	-on kill:
-		-GlobalLootModifier -> removes wool from generated loot and replaces it with correctly coloured wool
-	-on player shear:
-		-PlayerInteractEvent.EntityInteract -> cancels original event, spawns correct wool and plays sound...
-	-on dispenser shear:
-		-ShearsDispenseItemBehavior -> runs custom Sheep#shear for correct color, damages stack and plays sound...
+	-no mixin
+		-on kill:
+			-GlobalLootModifier -> removes wool from generated loot and replaces it with correctly coloured wool
+		-on player shear:
+			-PlayerInteractEvent.EntityInteract -> cancels original event, spawns correct wool and plays sound...
+		-on dispenser shear:
+			-ShearsDispenseItemBehavior -> runs custom Sheep#shear for correct color, damages stack and plays sound...
+	-mixin
+		-getColor:
+			-injected at RETURN in "getColor", if named "jeb_" custom DyeColor is returned
 
 
 Fletching Table:
-
-	-mixin: injected at "use" RETURN
-		-Serverside --> opens FletchingTableMenu
+	-mixin 	
+		-use:
+			-injected at RETURN in "use", Serverside --> opens FletchingTableMenu, like Crafting Table
+	-no mixin
+		-on right click block:
+			-PlayerRightClickBlockEvent -> if FletchingTableBlock, Serverside --> opens FletchingTableMenu (Doesnt cancel item use like bow)

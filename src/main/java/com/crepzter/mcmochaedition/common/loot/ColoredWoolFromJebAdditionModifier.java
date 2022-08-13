@@ -22,6 +22,8 @@ public class ColoredWoolFromJebAdditionModifier extends LootModifier {
 
 	@Override
 	protected List<ItemStack> doApply(List<ItemStack> generatedLoot, LootContext context) {
+		if(!McMochaEditionCommonConfigs.jeb_colored_wool_wo_mixin()) return generatedLoot;
+		
 		if(context.getParam(LootContextParams.THIS_ENTITY) instanceof Sheep sheep) {
 			if(sheep.hasCustomName() && "jeb_".equals(sheep.getName().getContents()) && McMochaEditionCommonConfigs.JEB_DROP_COLORED_WOOL.get()) {
 				int amount = 0;

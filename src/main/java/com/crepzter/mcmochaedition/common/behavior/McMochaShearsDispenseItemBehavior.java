@@ -23,6 +23,8 @@ import net.minecraft.world.phys.AABB;
 public class McMochaShearsDispenseItemBehavior extends ShearsDispenseItemBehavior {
 	
 	protected ItemStack execute(BlockSource source, ItemStack stack) {
+		if(!McMochaEditionCommonConfigs.jeb_colored_wool_wo_mixin()) return super.execute(source, stack);;
+		
 		Level level = source.getLevel();
 		if (!level.isClientSide()) {
 			BlockPos blockpos = source.getPos().relative(source.getBlockState().getValue(DispenserBlock.FACING));

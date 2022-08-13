@@ -29,6 +29,8 @@ public class CommonForgeEvents {
 	
 	@SubscribeEvent
 	public static void onPlayerEntityInteractEvent(PlayerInteractEvent.EntityInteract event) {
+		if(!McMochaEditionCommonConfigs.jeb_colored_wool_wo_mixin()) return;
+		
 		if(!event.getPlayer().level.isClientSide() && event.getTarget() instanceof Sheep sheep && event.getPlayer().getItemInHand(event.getHand()).is(Items.SHEARS) && sheep.readyForShearing()) {
 			if(sheep.hasCustomName() && "jeb_".equals(sheep.getName().getContents()) && McMochaEditionCommonConfigs.JEB_DROP_COLORED_WOOL.get()) {
 				sheep.setSheared(true);
@@ -52,23 +54,25 @@ public class CommonForgeEvents {
 		}
 	}
 	
+	
 	@SubscribeEvent
 	public static void onRightClickFletchingTable(PlayerInteractEvent.RightClickBlock event) {
-		/*
+		if(!McMochaEditionCommonConfigs.fletchin_table_menu_wo_mixin()) return;
+		
 		Player player = event.getPlayer();
 		BlockState state = player.level.getBlockState(event.getPos());
 		
-		if(state.is(Blocks.FLETCHING_TABLE) && !player.level.isClientSide()) {
+		if(state.is(Blocks.FLETCHING_TABLE)) {
 			event.setCanceled(true);
 			
-			player.openMenu(getMenuProvider(state, player.level, event.getPos()));
-		}*/
+			if(!player.level.isClientSide()) player.openMenu(getMenuProvider(state, player.level, event.getPos()));
+		}
 	}
-	/*
+	
 	public static MenuProvider getMenuProvider(BlockState state, Level level, BlockPos pos) {
 		return new SimpleMenuProvider((id, inv, access) -> {
 			return new FletchingTableMenu(id, inv, ContainerLevelAccess.create(level, pos));
 		}, FletchingTableMenu.CONTAINER_TITLE);
 	}
-	*/
+	
 }

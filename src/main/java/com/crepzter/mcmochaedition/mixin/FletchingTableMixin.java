@@ -6,6 +6,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 import org.spongepowered.asm.mixin.injection.callback.LocalCapture;
 import org.spongepowered.asm.mixin.injection.At;
 
+import com.crepzter.mcmochaedition.core.config.McMochaEditionCommonConfigs;
 import com.crepzter.mcmochaedition.screen.FletchingTableMenu;
 
 import net.minecraft.core.BlockPos;
@@ -28,8 +29,9 @@ public class FletchingTableMixin {
             at = @At(value = "RETURN"),
             cancellable = true
     )
-    private void customUse(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult result, CallbackInfoReturnable<InteractionResult> cir) {
-		if (level.isClientSide()) {
+    private void mcmochaedition_mixin_use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult result, CallbackInfoReturnable<InteractionResult> cir) {
+		if(!McMochaEditionCommonConfigs.fletchin_table_menu_mixin()) cir.setReturnValue(InteractionResult.PASS);
+		else if (level.isClientSide()) {
             cir.setReturnValue(InteractionResult.SUCCESS);
         } else {
             player.openMenu(getMenuProvider(state, level, pos));
