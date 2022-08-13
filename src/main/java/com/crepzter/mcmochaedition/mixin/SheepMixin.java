@@ -26,7 +26,6 @@ public abstract class SheepMixin {
 		Sheep sheep = (Sheep)((Object)this);
 		
 		if(McMochaEditionCommonConfigs.jeb_colored_wool_mixin() && sheep.hasCustomName() && "jeb_".equals(sheep.getName().getContents())) {
-			System.out.println("mixin");
 			cir.setReturnValue(SheepUtils.dyeForJeb(sheep));
 		} else {
 			cir.setReturnValue(DyeColor.byId(sheep.getEntityData().get(DATA_WOOL_ID) & 15));
