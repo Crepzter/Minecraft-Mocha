@@ -32,6 +32,21 @@ public class SheepUtils {
 	  p_29841_.put(DyeColor.BLACK, Blocks.BLACK_WOOL);
 	});
 	
+	public static DyeColor dyeForJeb(Sheep sheep) {
+		int a = sheep.tickCount / 25 + sheep.getId();
+        int b = DyeColor.values().length;
+        int k = a % b;
+        int l = (a + 1) % b;
+        
+        float f3 = (float)(sheep.tickCount % 25) / 25.0F;
+        
+        DyeColor d;
+        if(f3 < 0.5f) d = DyeColor.byId(k);
+        else d = DyeColor.byId(l);
+        
+        return d;
+	}
+	
 	public static Item woolForJeb(Sheep sheep) {
 		int a = sheep.tickCount / 25 + sheep.getId();
         int b = DyeColor.values().length;

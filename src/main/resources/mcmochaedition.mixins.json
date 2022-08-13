@@ -4,6 +4,7 @@
   "compatibilityLevel": "JAVA_17",
   "refmap": "mcmochaedition.refmap.json",
   "mixins": [
+  	"SheepMixin",
     "FletchingTableMixin"
   ],
   "injectors": {
