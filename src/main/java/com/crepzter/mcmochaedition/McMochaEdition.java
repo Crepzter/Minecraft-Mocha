@@ -25,6 +25,10 @@ public class McMochaEdition {
 		LootModifierInit.GLM.register(bus);
 		MenuInit.MENUS.register(bus);
 		RecipeInit.RECIPES.register(bus);
+		BlockInit.BLOCKS.register(bus);
+		BlockInit.BLOCK_ITEMS.register(bus);
+		BlockInit.BLOCK_ENTITIES.register(bus);
+		BlockInit.BLOCK_ITEM_ENTITIES.register(bus);
 		
 		ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, McMochaEditionCommonConfigs.SPEC, "mcmochaedition-common-config.toml");
 	}
