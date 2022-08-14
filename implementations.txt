@@ -21,3 +21,6 @@ Fletching Table:
 	-no mixin
 		-on right click block:
 			-PlayerRightClickBlockEvent -> if FletchingTableBlock, Serverside --> opens FletchingTableMenu (Doesnt cancel item use like bow)
+
+Sugar Block:
+	-Sugar -block, -blockitem, -blockentity, -blockitementity added extra
