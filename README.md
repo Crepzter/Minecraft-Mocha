@@ -7,5 +7,5 @@ Refer to implementations.txt to see how each feature is accomplished.
 Current Features are:
 
 -"Jeb_" named sheeps drop wool accordingly to their current color
-
 -The fletching table now got its own craftingmenu to craft arrows more efficiently
+-A sugarblock which dissolves when touching water

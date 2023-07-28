@@ -9,21 +9,17 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.EntityBlock;
-import net.minecraft.world.level.block.SandBlock;
+import net.minecraft.world.level.block.FallingBlock;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityTicker;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 
-public class SugarBlock extends SandBlock implements EntityBlock {
+public class SugarBlock extends Block implements EntityBlock {
 
-	/*public SugarBlock() {
-		super(BlockBehaviour.Properties.copy(Blocks.SAND) );
-	}*/
-	
 	public SugarBlock() {
-		super(0, BlockBehaviour.Properties.copy(Blocks.SAND) );
+		super(BlockBehaviour.Properties.copy(Blocks.SAND) );
 	}
 	
 	@Override
